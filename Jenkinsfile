@@ -3,8 +3,9 @@ node{
     git branch: 'main', url: 'https://github.com/nitheshkumar229/rapido-web-app.git'
   }
   stage('build'){
-  def mvnhome= tool name: 'maven3', type: 'maven'
-   sh '''${mvnhome}/bin/mvn package'''
+  def mvnHome= tool name: 'maven3', type: 'maven'
+    sh 'echo $mvnHome'
+   sh '''${mvnHome}/bin/mvn package'''
 
   }
 }
