@@ -1,5 +1,5 @@
 node{
   stage('scm checkout'){
- sh 'echo welcome'
+    git branch: 'main', url: 'https://github.com/nitheshkumar229/rapido-web-app.git'
   }
 }
